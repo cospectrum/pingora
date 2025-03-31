@@ -136,7 +136,7 @@ impl ProxyHttp for ExampleProxyHttps {
             format!("127.0.0.1:{port}"),
             true,
             sni.to_string(),
-        ))?;
+        )?);
         peer.options.alternative_cn = Some(alt.to_string());
 
         let verify = session.get_header_bytes("verify") == b"1";
